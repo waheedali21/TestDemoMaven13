@@ -21,7 +21,7 @@ public class TestCase2 extends BaseTest{
 	
 	
 	@BeforeMethod
-	public void browserSetUp() {
+	public void browserSetUp() throws Exception {
 		
 		BaseTest.setUp();
 	}

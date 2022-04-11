@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.demo.base;
 
 import java.io.FileInputStream;
@@ -20,15 +18,15 @@ public class BaseTest {
 	public static Properties prop;
 	public static FileInputStream fis;
 	
-	public void loadConfig() throws Exception {
+//	public void loadConfig() throws Exception {
+		
+//	}
+	
+	
+	public static void setUp() throws Exception {
 		prop  =new Properties();
 		fis = new FileInputStream(System.getProperty("user.dir")+ "\\src\\test\\resources\\executable\\config.properties");
 		prop.load(fis);
-	}
-	
-	
-	public static void setUp() {
-		
 		String browserName = prop.getProperty("browser");
 		System.out.println("Browser: " + browserName);
 		
@@ -56,6 +54,7 @@ public class BaseTest {
 		
 		
 		driver.get(prop.getProperty("url"));
+		//driver.get("https://wwww.google.com");
 		
 	}
 	
